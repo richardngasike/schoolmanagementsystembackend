@@ -24,7 +24,7 @@ const {
   getAcademicYears, getSemesters, createAcademicYear, createSemester,
 } = require('../controllers/controllers');
 
-const authLimiter = rateLimit({ windowMs: 15*60*1000, max: 20 });
+const authLimiter = rateLimit({ windowMs: 15*60*1000, max: 100 });
 
 // ── AUTH ─────────────────────────────────────────────────────────────
 router.post('/auth/login',           authLimiter, login);
